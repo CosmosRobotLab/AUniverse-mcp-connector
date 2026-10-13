@@ -1,0 +1,61 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      catalog:
+        description: "Also compare with a server's catalogue, e.g. https://auniverse.space/api/mcp/catalog (leave empty to skip)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generated files are up to date
+        run: node scripts/sync.mjs --check
+
+      # Compared with the pull request's base branch, or with what the branch was before this push.
+      - name: Plugin version goes up when the plugin changes
+        if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.event.before != '0000000000000000000000000000000000000000')
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && github.base_ref || github.event.before }}
+        run: |
+          if ! git fetch --no-tags --depth=1 origin "$BASE"; then
+            echo "::warning::Couldn't fetch $BASE, so the plugin wasn't compared with it."
+            exit 0
+          fi
+          node scripts/sync.mjs --check --since FETCH_HEAD
+
+      - name: Generator tests
+        run: node --test scripts/sync.test.mjs
+
+      - name: Connect script
+        run: |
+          sh -n scripts/connect.sh
+          shellcheck scripts/connect.sh
+          git ls-files -s scripts/connect.sh | grep -q '^100755 ' || { echo "scripts/connect.sh must be executable: git update-index --chmod=+x scripts/connect.sh"; exit 1; }
+
+      - name: Claude Code plugin and marketplace
+        run: |
+          npx -y @anthropic-ai/claude-code@2.1.296 plugin validate --strict .
+          for dir in plugins/*/; do
+            npx -y @anthropic-ai/claude-code@2.1.296 plugin validate --strict "$dir"
+          done
+
+      - name: Compare with the server
+        if: github.event_name == 'workflow_dispatch' && inputs.catalog != ''
+        env:
+          CATALOG_URL: ${{ inputs.catalog }}
+        run: node scripts/sync.mjs --check --from "$CATALOG_URL"

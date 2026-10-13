@@ -1,0 +1,34 @@
+{
+  "name": "auniverse",
+  "version": "0.1.0",
+  "description": "Campus events and noticeboards from AUniverse, the Adelaide University community app. Connects Claude Code to the AUniverse MCP server as you.",
+  "author": {
+    "name": "CosmosRobotLab"
+  },
+  "homepage": "https://github.com/CosmosRobotLab/AUniverse-mcp-connector",
+  "repository": "https://github.com/CosmosRobotLab/AUniverse-mcp-connector",
+  "keywords": [
+    "mcp",
+    "auniverse",
+    "adelaide-university",
+    "events"
+  ],
+  "userConfig": {
+    "token": {
+      "type": "string",
+      "title": "AUniverse personal access token",
+      "description": "Create one at https://auniverse.space/user-profile/connections (Profile → MCP). It starts with aun_pat_",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "mcpServers": {
+    "auniverse": {
+      "type": "http",
+      "url": "https://mcp.auniverse.space/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.token}"
+      }
+    }
+  }
+}

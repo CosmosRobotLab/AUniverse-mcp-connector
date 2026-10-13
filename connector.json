@@ -1,0 +1,34 @@
+{
+  "$comment": "Client-side facts for connecting to the AUniverse MCP server. Edit by hand when the server changes, then run `node scripts/sync.mjs` to regenerate everything that repeats them (see MAINTAINING.md).",
+  "version": "0.1.0",
+  "server": {
+    "name": "auniverse",
+    "title": "AUniverse",
+    "description": "Campus events and noticeboards from AUniverse, the Adelaide University community app",
+    "status": "early-access",
+    "status_note": "The connector isn't switched on in production yet. Until it is, mcp.auniverse.space doesn't answer or answers that the connector \"isn't available on this server right now\", and Profile → MCP can't create tokens.",
+    "transport": "http",
+    "url": "https://mcp.auniverse.space/mcp",
+    "site": "https://auniverse.space",
+    "docs": "https://auniverse.space/developers/mcp",
+    "catalog": "https://auniverse.space/api/mcp/catalog",
+    "token_page": "https://auniverse.space/user-profile/connections"
+  },
+  "auth": {
+    "header": "Authorization",
+    "scheme": "Bearer",
+    "token_prefix": "aun_pat_",
+    "token_pattern": "^aun_pat_[A-Za-z0-9]{43}$",
+    "env_var": "AUNIVERSE_TOKEN"
+  },
+  "plugin": {
+    "marketplace": "auniverse",
+    "name": "auniverse",
+    "repo": "CosmosRobotLab/AUniverse-mcp-connector"
+  },
+  "other_servers": {
+    "$comment": "For AUniverse developers only (MAINTAINING.md). Tokens are bound to the server URL they were created for.",
+    "staging": "https://staging-mcp.auniverse.space/mcp",
+    "local": "http://localhost:8000/mcp"
+  }
+}

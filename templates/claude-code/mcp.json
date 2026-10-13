@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "auniverse": {
+      "type": "http",
+      "url": "https://mcp.auniverse.space/mcp",
+      "headers": {
+        "Authorization": "Bearer ${AUNIVERSE_TOKEN}"
+      }
+    }
+  }
+}

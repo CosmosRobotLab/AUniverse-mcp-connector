@@ -1,0 +1,2 @@
+# LF everywhere, so scripts/connect.sh runs from a checkout made on Windows (for WSL).
+* text=auto eol=lf
