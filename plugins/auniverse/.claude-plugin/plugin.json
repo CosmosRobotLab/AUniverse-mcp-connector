@@ -1,6 +1,6 @@
 {
   "name": "auniverse",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Campus events and noticeboards from AUniverse, the Adelaide University community app. Connects Claude Code to the AUniverse MCP server as you.",
   "author": {
     "name": "CosmosRobotLab"

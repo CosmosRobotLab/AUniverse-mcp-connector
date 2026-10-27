@@ -5,7 +5,7 @@ Connect your own AI assistant to [AUniverse](https://auniverse.space), the Adela
 This repository is the client side: setup for **Claude Code** and **Codex**, the two assistants supported for now. The server it connects to is part of AUniverse itself, and this repository follows it.
 
 <!-- generated:status -->
-> **Status: early access.** The connector isn't switched on in production yet. Until it is, https://api.auniverse.space/mcp answers that the connector "isn't available on this server right now", and Profile → MCP can't create tokens.
+> **Status: live** at `https://api.auniverse.space/mcp`.
 <!-- /generated:status -->
 
 ## What you can ask

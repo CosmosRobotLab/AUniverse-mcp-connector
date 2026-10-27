@@ -51,7 +51,7 @@ Refusals before a tool runs come back as HTTP errors with a JSON-RPC error body:
 
 **It works in a terminal but not in the app or the editor.** Apps started from the Dock, Start menu or an app launcher often don't see variables from your shell profile. In Claude Code, switch to the plugin (removing the hand-added entry first); in Codex, put the token in `~/.codex/.env`. Or start the editor from a terminal.
 
-**`https://api.auniverse.space/mcp` answers that the connector "isn't available on this server right now".** Before launch, that's expected: check the status at the top of the [README](../README.md). Otherwise the connector has been switched off for a while; try again later.
+**`https://api.auniverse.space/mcp` answers that the connector "isn't available on this server right now".** The connector has been switched off on the server for a while, for example for maintenance. Try again later.
 
 **Your assistant can't see a tool from the [tool list](tools.md).** Each tool is only shown to the account levels that may use it. Ask "Who am I on AUniverse?" to see your level and the tools available to you.
 

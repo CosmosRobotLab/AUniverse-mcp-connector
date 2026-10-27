@@ -194,8 +194,8 @@ Run the line for the way you installed it. To stop the token working everywhere,
 | `Dynamic Client Registration rejected (HTTP 404)`, or an **Authenticate** button in `/mcp` | No token was sent, so Claude Code tried a sign-in AUniverse doesn't offer yet | Add the server with the `--header` part, or configure the plugin's token |
 | `Insufficient scope: required "…"` when a tool is called | Your account allows that tool but this token lacks its scope | Create a token with the scopes it lists |
 | `429` | Too many requests in a minute | Wait for the number of seconds it gives |
-| `HTTP 503` with "isn't available on this server right now" | The connector is switched off on the server: before launch, that's expected (see the status at the top of the [README](../README.md)) | Try again later |
-| `ENOTFOUND` or `ECONNREFUSED` for `api.auniverse.space` | The server can't be reached: before launch, that's expected; otherwise it's down or your network blocks it | Check the README's status, then try again later or from another network |
+| `HTTP 503` with "isn't available on this server right now" | The connector is switched off on the server for a while, for example for maintenance | Try again later |
+| `ENOTFOUND` or `ECONNREFUSED` for `api.auniverse.space` | The server can't be reached: it's down or your network blocks it | Try again later or from another network |
 | `already exists in user config` | You ran `claude mcp add` twice | Run `claude mcp remove auniverse --scope user`, then add it again |
 | The plugin's server isn't listed at all | The plugin has no token yet, or a server added by hand for the same address hides it (`claude mcp list` then shows that one instead) | Configure the token (see Plugin above), or remove the hand-added entry with `claude mcp remove <its name> --scope user` |
 
