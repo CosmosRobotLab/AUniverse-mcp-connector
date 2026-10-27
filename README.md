@@ -5,7 +5,7 @@ Connect your own AI assistant to [AUniverse](https://auniverse.space), the Adela
 This repository is the client side: setup for **Claude Code** and **Codex**, the two assistants supported for now. The server it connects to is part of AUniverse itself, and this repository follows it.
 
 <!-- generated:status -->
-> **Status: early access.** The connector isn't switched on in production yet. Until it is, mcp.auniverse.space doesn't answer or answers that the connector "isn't available on this server right now", and Profile → MCP can't create tokens.
+> **Status: early access.** The connector isn't switched on in production yet. Until it is, https://api.auniverse.space/mcp answers that the connector "isn't available on this server right now", and Profile → MCP can't create tokens.
 <!-- /generated:status -->
 
 ## What you can ask
@@ -48,7 +48,7 @@ Or add the server by hand, with the token in an environment variable (put the `e
 <!-- generated:claude-code-manual -->
 ```bash
 export AUNIVERSE_TOKEN="aun_pat_..."
-claude mcp add --transport http --scope user auniverse https://mcp.auniverse.space/mcp --header 'Authorization: Bearer ${AUNIVERSE_TOKEN}'
+claude mcp add --transport http --scope user auniverse https://api.auniverse.space/mcp --header 'Authorization: Bearer ${AUNIVERSE_TOKEN}'
 ```
 <!-- /generated:claude-code-manual -->
 
@@ -61,7 +61,7 @@ Put the `export` line in your shell profile, open a new terminal, then add the s
 <!-- generated:codex -->
 ```bash
 export AUNIVERSE_TOKEN="aun_pat_..."
-codex mcp add auniverse --url https://mcp.auniverse.space/mcp --bearer-token-env-var AUNIVERSE_TOKEN
+codex mcp add auniverse --url https://api.auniverse.space/mcp --bearer-token-env-var AUNIVERSE_TOKEN
 ```
 <!-- /generated:codex -->
 

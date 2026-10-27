@@ -17,7 +17,7 @@ On Windows without WSL, this PowerShell line does the same check:
 
 <!-- generated:check-powershell -->
 ```powershell
-(Invoke-RestMethod -Method Post https://mcp.auniverse.space/mcp -ContentType application/json -Headers @{ Authorization = "Bearer $env:AUNIVERSE_TOKEN"; Accept = 'application/json, text/event-stream' } -Body '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"auniverse_whoami","arguments":{}}}').result.structuredContent
+(Invoke-RestMethod -Method Post https://api.auniverse.space/mcp -ContentType application/json -Headers @{ Authorization = "Bearer $env:AUNIVERSE_TOKEN"; Accept = 'application/json, text/event-stream' } -Body '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"auniverse_whoami","arguments":{}}}').result.structuredContent
 ```
 <!-- /generated:check-powershell -->
 
@@ -51,7 +51,7 @@ Refusals before a tool runs come back as HTTP errors with a JSON-RPC error body:
 
 **It works in a terminal but not in the app or the editor.** Apps started from the Dock, Start menu or an app launcher often don't see variables from your shell profile. In Claude Code, switch to the plugin (removing the hand-added entry first); in Codex, put the token in `~/.codex/.env`. Or start the editor from a terminal.
 
-**`mcp.auniverse.space` doesn't answer, or answers that the connector "isn't available on this server right now".** Before launch, that's expected: check the status at the top of the [README](../README.md). Otherwise the server is down or your network blocks it; try again later or from another network.
+**`https://api.auniverse.space/mcp` answers that the connector "isn't available on this server right now".** Before launch, that's expected: check the status at the top of the [README](../README.md). Otherwise the connector has been switched off for a while; try again later.
 
 **Your assistant can't see a tool from the [tool list](tools.md).** Each tool is only shown to the account levels that may use it. Ask "Who am I on AUniverse?" to see your level and the tools available to you.
 
