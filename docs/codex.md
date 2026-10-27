@@ -11,7 +11,7 @@ macOS and Linux. Put the `export` line in your shell profile (`~/.zshrc` or `~/.
 <!-- generated:add -->
 ```bash
 export AUNIVERSE_TOKEN="aun_pat_..."
-codex mcp add auniverse --url https://mcp.auniverse.space/mcp --bearer-token-env-var AUNIVERSE_TOKEN
+codex mcp add auniverse --url https://api.auniverse.space/mcp --bearer-token-env-var AUNIVERSE_TOKEN
 ```
 <!-- /generated:add -->
 
@@ -23,7 +23,7 @@ Windows PowerShell (then open a new terminal):
 ```powershell
 [Environment]::SetEnvironmentVariable('AUNIVERSE_TOKEN', 'aun_pat_...', 'User')
 $env:AUNIVERSE_TOKEN = 'aun_pat_...'
-codex mcp add auniverse --url https://mcp.auniverse.space/mcp --bearer-token-env-var AUNIVERSE_TOKEN
+codex mcp add auniverse --url https://api.auniverse.space/mcp --bearer-token-env-var AUNIVERSE_TOKEN
 ```
 <!-- /generated:add-powershell -->
 
@@ -46,7 +46,7 @@ Or start Codex with `codex --no-daemon`, which doesn't use it.
 <!-- generated:config -->
 ```toml
 [mcp_servers.auniverse]
-url = "https://mcp.auniverse.space/mcp"
+url = "https://api.auniverse.space/mcp"
 bearer_token_env_var = "AUNIVERSE_TOKEN"
 ```
 <!-- /generated:config -->

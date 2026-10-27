@@ -102,7 +102,7 @@ claude mcp add --transport http --scope user auniverse-dev http://localhost:<BAC
 codex mcp add auniverse-dev --url http://localhost:<BACKEND_PORT>/mcp --bearer-token-env-var AUNIVERSE_DEV_TOKEN
 ```
 
-For staging, use `https://staging-mcp.auniverse.space/mcp` and a token from `staging.auniverse.space`. The script only accepts plain `http://` for a server on your own computer.
+For staging, use `https://staging-api.auniverse.space/mcp` and a token from `staging.auniverse.space`. The script only accepts plain `http://` for a server on your own computer.
 
 ## Testing the plugin before it is merged
 

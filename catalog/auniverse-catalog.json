@@ -6,7 +6,7 @@
   "server": {
     "name": "auniverse",
     "version": "0.1.0",
-    "mcp_url": "https://mcp.auniverse.space/mcp",
+    "mcp_url": "https://api.auniverse.space/mcp",
     "docs_url": "https://auniverse.space/developers/mcp",
     "transport": "streamable-http (stateless, JSON responses)",
     "auth": "Bearer personal access token (aun_pat_…); OAuth sign-in for claude.ai is planned",
