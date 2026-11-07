@@ -13,6 +13,7 @@ This repository is the client side: setup for **Claude Code** and **Codex**, the
 - "What's on tonight near Hub Central?"
 - "What's pinned on the Barr Smith Library board?"
 - "Anything social at Magill this week?"
+- "Any uni club events this week?"
 - "Show me the posters I've posted, drafts included."
 - "Tell me more about the first one: when, where, and how many are going?"
 
