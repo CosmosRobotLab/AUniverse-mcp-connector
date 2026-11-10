@@ -1,6 +1,6 @@
 {
   "$comment": "Client-side facts for connecting to the AUniverse MCP server. Edit by hand when the server changes, then run `node scripts/sync.mjs` to regenerate everything that repeats them (see MAINTAINING.md).",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "server": {
     "name": "auniverse",
     "title": "AUniverse",
