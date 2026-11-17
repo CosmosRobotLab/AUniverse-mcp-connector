@@ -10,7 +10,7 @@
     {
       "name": "auniverse",
       "source": "./plugins/auniverse",
-      "description": "Campus events and noticeboards from AUniverse, the Adelaide University community app: the AUniverse MCP server, signed in with your personal access token"
+      "description": "Campus events from AUniverse, the Adelaide University community app: the AUniverse MCP server, signed in with your personal access token"
     }
   ]
 }
