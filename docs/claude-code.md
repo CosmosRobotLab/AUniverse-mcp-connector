@@ -141,9 +141,7 @@ Plugin:
       "mcp__plugin_auniverse_auniverse__auniverse_whoami",
       "mcp__plugin_auniverse_auniverse__poster_search",
       "mcp__plugin_auniverse_auniverse__poster_get",
-      "mcp__plugin_auniverse_auniverse__poster_list_tags",
-      "mcp__plugin_auniverse_auniverse__poster_list_boards",
-      "mcp__plugin_auniverse_auniverse__poster_board_registry"
+      "mcp__plugin_auniverse_auniverse__poster_list_tags"
     ]
   }
 }
@@ -160,9 +158,7 @@ Added by hand:
       "mcp__auniverse__auniverse_whoami",
       "mcp__auniverse__poster_search",
       "mcp__auniverse__poster_get",
-      "mcp__auniverse__poster_list_tags",
-      "mcp__auniverse__poster_list_boards",
-      "mcp__auniverse__poster_board_registry"
+      "mcp__auniverse__poster_list_tags"
     ]
   }
 }

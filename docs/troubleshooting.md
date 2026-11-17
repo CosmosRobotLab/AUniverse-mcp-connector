@@ -40,7 +40,7 @@ Refusals before a tool runs come back as HTTP errors with a JSON-RPC error body:
 | HTTP 405 on a GET | Normal: the server answers POST only and never streams | Nothing to fix; clients cope with it |
 | Tool error `FORBIDDEN` | Your account level doesn't allow this tool | Nothing to fix: it isn't for your role |
 | Tool error `NOT_FOUND` | The poster doesn't exist, or isn't visible to you | Check the id; private posters are only visible to their owner |
-| Tool error `INVALID_ARGUMENTS`, `INVALID_SORT`, `INVALID_NEAR`, `UNKNOWN_BOARD`, `UNKNOWN_CAMPUS`, `INVALID_CURSOR` | Something in the request is off | The assistant usually retries with fixed input; the message says what |
+| Tool error `INVALID_ARGUMENTS`, `UNKNOWN_CAMPUS`, `INVALID_CURSOR` | Something in the request is off | The assistant usually retries with fixed input; the message says what |
 | Tool error `UNKNOWN_TOOL`, `INTERNAL_ERROR` | No such tool, or a fault on AUniverse's side | Check the tool list; otherwise try again later |
 
 ## Common situations

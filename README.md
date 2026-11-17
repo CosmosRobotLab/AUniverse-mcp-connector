@@ -1,6 +1,6 @@
 # AUniverse MCP connector
 
-Connect your own AI assistant to [AUniverse](https://auniverse.space), the Adelaide University community app. Once connected, Claude Code or Codex can find what's on around campus, open a poster's details and look up the paper noticeboards for you. It acts as you, and it can never do more than you can on the website.
+Connect your own AI assistant to [AUniverse](https://auniverse.space), the Adelaide University community app. Once connected, Claude Code or Codex can find what's on around campus, open a poster's details and tell you where each event is held. It acts as you, and it can never do more than you can on the website.
 
 This repository is the client side: setup for **Claude Code** and **Codex**, the two assistants supported for now. The server it connects to is part of AUniverse itself, and this repository follows it.
 
@@ -10,8 +10,8 @@ This repository is the client side: setup for **Claude Code** and **Codex**, the
 
 ## What you can ask
 
-- "What's on tonight near Hub Central?"
-- "What's pinned on the Barr Smith Library board?"
+- "What's on tonight at City East?"
+- "Anything online this week?"
 - "Anything social at Magill this week?"
 - "Any uni club events this week?"
 - "Show me the posters I've posted, drafts included."
@@ -95,8 +95,6 @@ To test the token on its own, from a copy of this repository: `scripts/connect.s
 | `poster_search` | Search posters | all members |
 | `poster_get` | Get a poster | all members |
 | `poster_list_tags` | List poster tags | all members |
-| `poster_list_boards` | List noticeboards | all members |
-| `poster_board_registry` | Noticeboard registry (admins) | admins |
 <!-- /generated:tools -->
 
 Your assistant only sees the tools your account level allows. Every tool, with its arguments, is in [docs/tools.md](docs/tools.md), and the official guide is at [auniverse.space/developers/mcp](https://auniverse.space/developers/mcp).
