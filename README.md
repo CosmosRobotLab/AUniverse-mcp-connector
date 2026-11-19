@@ -107,7 +107,8 @@ Your assistant only sees the tools your account level allows. Every tool, with i
 - **Poster text is other people's writing.** The server marks it as untrusted and tells your assistant to show it, never to follow instructions inside it.
 - **Revoke any time** in Profile → MCP: the token stops working at once.
 - **Limits:** 60 requests a minute for each person, across all your tokens and assistants. Tokens last 90 days unless you choose otherwise (at most 365), and you can have 20 at a time. You can try to create a token 10 times an hour, mistyped passwords included.
-- **Privacy:** each call is logged with who, which tool, the outcome and how long it took. The arguments (what you searched for) are kept only as a keyed fingerprint, not as text. Site admins can see your tokens' names, scopes and when they were last used, and can revoke one if it is misused; they never see the token itself. Your AI provider handles what the tools return under its own terms.
+- **Privacy:** each call is logged with who, which tool, the outcome and how long it took. The arguments (what you searched for) are kept only as a keyed fingerprint, not as text. Site admins can see your tokens' names, scopes and when they were last used, and can revoke one if it is misused; they never see the token itself. Your AI provider handles what the tools return under its own terms. Call records and connections are kept for up to 12 months.
+- **Terms and privacy:** using AUniverse through an assistant is covered by the [Terms of Service](https://auniverse.space/terms), and the [Privacy Policy](https://auniverse.space/privacy) says what is kept and for how long.
 - **Other assistants:** claude.ai, Claude Desktop and phones will connect with an AUniverse sign-in instead of a token, later. This connector covers Claude Code and Codex.
 
 Something not working? See [docs/troubleshooting.md](docs/troubleshooting.md).
